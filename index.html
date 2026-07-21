@@ -1,10 +1,194 @@
-<!Doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta nombre"viewport" content="ancho=ancho-dispositivo, innicial-escala=1.0">
-        <titulo>Documento</titulo>
-    </head>
-    <body>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGG — Finca Las Mercedes</title>
+    <meta name="description" content="Sistema Integral de Gestión Ganadera de la finca Las Mercedes: hato, sanidad, reproducción, producción, potreros y costos en un solo lugar.">
+
+    <!-- Tipografías.
+         Se piden en enlaces separados a propósito: si una familia fallara,
+         las demás siguen cargando. Big Shoulders se pide con sus dos nombres
+         posibles porque la familia cambió de nombre al volverse variable. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Enlace de accesibilidad: solo se ve al navegar con el teclado -->
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- ============ CABECERA ============ -->
+    <header class="cabecera">
+        <a class="marca" href="index.html">
+            <!-- Hierro de la finca: monograma LM sobre una curva (rocker) -->
+            <svg class="marca__hierro" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <path d="M18 74 Q50 94 82 74"/>
+                <path d="M30 24 L30 60 L46 60"/>
+                <path d="M54 60 L54 26 L64 44 L74 26 L74 60"/>
+            </svg>
+            <span class="marca__texto">
+                <strong>SIGG</strong>
+                <span>Finca Las Mercedes</span>
+            </span>
+        </a>
+
+        <nav class="nav" aria-label="Principal">
+            <a href="#modulos">Módulos</a>
+            <a href="#proyecto">Proyecto</a>
+            <a class="nav__accion" href="#modulos">Entrar al sistema</a>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ============ PORTADA ============ -->
+        <section class="portada">
+            <!-- El hierro, marcado en grande sobre el fondo -->
+            <svg class="portada__marca" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <path d="M18 74 Q50 94 82 74"/>
+                <path d="M30 24 L30 60 L46 60"/>
+                <path d="M54 60 L54 26 L64 44 L74 26 L74 60"/>
+            </svg>
+
+            <div class="portada__texto">
+                <p class="cintillo">Boyacá · Colombia</p>
+                <h1 class="portada__titulo">La finca entera,<br>sin una sola libreta.</h1>
+                <p class="portada__entrada">
+                    SIGG reúne el inventario de la finca, la sanidad, la reproducción, la producción,
+                    los potreros y los costos en un solo sistema. Lo que antes vivía repartido en
+                    cuadernos, ahora se consulta en segundos.
+                </p>
+                <div class="portada__acciones">
+                    <a class="boton boton--fuerte" href="#modulos">Ver los módulos</a>
+                    <a class="boton" href="#proyecto">Sobre el proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MÓDULOS ============ -->
+        <section class="seccion" id="modulos">
+            <div class="seccion__encabezado">
+                <p class="cintillo">Seis módulos</p>
+                <h2 class="seccion__titulo">Todo lo que se registra en la finca</h2>
+                <p class="seccion__entrada">
+                    Cada módulo cubre una parte de la operación. Se alimentan entre sí:
+                    sin el hato identificado, los demás no tienen de quién hablar.
+                </p>
+            </div>
+
+            <ul class="modulos">
+                <li class="modulo">
+                    <a class="modulo__enlace" href="#" aria-disabled="true">
+                        <h3 class="modulo__nombre">Inventario del hato</h3>
+                        <p class="modulo__texto">
+                            Registro e identificación de animales, categorías, altas y bajas.
+                        </p>
+                        <span class="chip chip--activo">En desarrollo</span>
+                    </a>
+                </li>
+
+                <li class="modulo">
+                    <a class="modulo__enlace" href="#" aria-disabled="true">
+                        <h3 class="modulo__nombre">Control sanitario</h3>
+                        <p class="modulo__texto">
+                            Vacunaciones, tratamientos, enfermedades e historial médico.
+                        </p>
+                        <span class="chip">Pendiente</span>
+                    </a>
+                </li>
+
+                <li class="modulo">
+                    <a class="modulo__enlace" href="#" aria-disabled="true">
+                        <h3 class="modulo__nombre">Reproducción</h3>
+                        <p class="modulo__texto">
+                            Montas, servicios, gestación, partos e indicadores reproductivos.
+                        </p>
+                        <span class="chip">Pendiente</span>
+                    </a>
+                </li>
+
+                <li class="modulo">
+                    <a class="modulo__enlace" href="#" aria-disabled="true">
+                        <h3 class="modulo__nombre">Producción</h3>
+                        <p class="modulo__texto">
+                            Registro de producción de leche, pesajes y seguimiento de ceba.
+                        </p>
+                        <span class="chip">Pendiente</span>
+                    </a>
+                </li>
+
+                <li class="modulo">
+                    <a class="modulo__enlace" href="#" aria-disabled="true">
+                        <h3 class="modulo__nombre">Potreros y alimentación</h3>
+                        <p class="modulo__texto">
+                            Manejo de praderas, rotación y suministro de alimento.
+                        </p>
+                        <span class="chip">Pendiente</span>
+                    </a>
+                </li>
+
+                <li class="modulo">
+                    <a class="modulo__enlace" href="#" aria-disabled="true">
+                        <h3 class="modulo__nombre">Costos e ingresos</h3>
+                        <p class="modulo__texto">
+                            Registro de gastos, ventas y rentabilidad de la operación.
+                        </p>
+                        <span class="chip">Pendiente</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============ PROYECTO ============ -->
+        <section class="seccion seccion--oscura" id="proyecto">
+            <div class="proyecto">
+                <div>
+                    <p class="cintillo cintillo--claro">El proyecto</p>
+                    <h2 class="seccion__titulo seccion__titulo--claro">Por qué existe SIGG</h2>
+                    <p class="proyecto__texto">
+                        Los registros manuales se pierden, se contradicen y solo los entiende quien
+                        los escribió. SIGG busca reemplazarlos por una herramienta que permita
+                        consultar el estado de la finca en cualquier momento, reducir errores y
+                        apoyar las decisiones con información confiable.
+                    </p>
+                </div>
+
+                <dl class="ficha">
+                    <div class="ficha__fila">
+                        <dt>Estado</dt>
+                        <dd>En desarrollo</dd>
+                    </div>
+                    <div class="ficha__fila">
+                        <dt>Tecnologías</dt>
+                        <dd>HTML5 · CSS3 · JavaScript</dd>
+                    </div>
+                    <div class="ficha__fila">
+                        <dt>Licencia</dt>
+                        <dd>MIT</dd>
+                    </div>
+                    <div class="ficha__fila">
+                        <dt>Autor</dt>
+                        <dd>Ing. Zulma Patricia Salas Bautista</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ PIE ============ -->
+    <footer class="pie">
+        <p>SIGG — Sistema Integral de Gestión Ganadera · Finca Las Mercedes</p>
+        <p><span id="anio"></span> · Licencia MIT</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

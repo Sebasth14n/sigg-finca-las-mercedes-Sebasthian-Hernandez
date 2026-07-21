@@ -12,7 +12,7 @@
     --cuero:       #8A5A34;   /* cuero: acento secundario */
     --tinta:       #221C16;   /* texto principal */
     --tinta-suave: #5C544B;   /* texto secundario */
-    --hueso:       #FAFAF8;   /* fondo de la página */
+    --hueso:       #FCFBF9;   /* fondo ligeramente más cálido */
     --borde:       #E2DFD7;   /* líneas y bordes */
     --blanco:      #FFFFFF;
 
@@ -23,7 +23,7 @@
 
     /* Medidas */
     --ancho: 1180px;
-    --radio: 4px;
+    --radio: 6px; /* antes 4px */
 }
 
 /* ---------- 2. Base ---------- */
@@ -41,13 +41,14 @@ body {
     background-color: var(--hueso);
     color: var(--tinta);
     font-family: var(--texto);
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 17.5px; /* ligeramente mayor para mejorar la lectura */
+    line-height: 1.7;  /* un poco más de espacio entre líneas */
     -webkit-font-smoothing: antialiased;
 }
 
 a {
     color: inherit;
+    transition: color .2s ease; /* transición suave al pasar el cursor */
 }
 
 /* Foco visible para quien navega con el teclado */
@@ -67,7 +68,7 @@ button:focus-visible {
     background-color: var(--tinta);
     color: var(--blanco);
     text-decoration: none;
-    transition: top 0.2s;
+    transition: top 0.25s ease;
 }
 
 .saltar:focus {
@@ -78,18 +79,19 @@ button:focus-visible {
 
 /* Etiqueta pequeña sobre los títulos */
 .cintillo {
-    margin-bottom: 14px;
+    margin-bottom: 16px; /* antes 14px */
     color: var(--cuero);
     font-family: var(--dato);
     font-size: 12px;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em; /* un poco más de separación */
     text-transform: uppercase;
 }
 
 .cintillo--claro {
     color: var(--ocre);
 }
+
 
 /* Botones */
 .boton {

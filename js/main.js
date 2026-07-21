@@ -32,4 +32,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    /* ---------- Desplazamiento suave ----------
+       Hace que los enlaces internos (#inicio, #modulos, etc.)
+       se desplacen de forma fluida hasta la sección elegida. */
+    const enlacesInternos = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+
+    enlacesInternos.forEach(function (enlace) {
+        enlace.addEventListener("click", function (evento) {
+            const destino = document.querySelector(this.getAttribute("href"));
+
+            if (destino) {
+                evento.preventDefault();
+                destino.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+    });
+
+    /* ---------- Mensaje de inicio ----------
+       Solo visible para desarrolladores en la consola. */
+    console.log("SIGG - Sitio web cargado correctamente.");
+
 });

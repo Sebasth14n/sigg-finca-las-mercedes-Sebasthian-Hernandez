@@ -298,12 +298,11 @@ button:focus-visible {
 .seccion__entrada {
     color: var(--tinta-suave);
 }
-
 /* ---------- 7. Módulos ---------- */
 .modulos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
+    gap: 2px; /* Antes: 1px */
     background-color: var(--borde);
     border: 1px solid var(--borde);
     list-style: none;
@@ -317,33 +316,35 @@ button:focus-visible {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 14px; /* Antes: 12px */
     height: 100%;
-    padding: 30px 26px 26px;
+    padding: 32px 28px 28px; /* Un poco más de espacio */
     text-decoration: none;
-    /* La línea de acento que "se marca" al pasar el cursor */
+
+    /* Línea de acento */
     background-image: linear-gradient(var(--ocre), var(--ocre));
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 0 4px;
-    transition: background-size 0.28s ease;
+    background-size: 0 3px; /* Antes: 4px */
+    transition: background-size 0.3s ease;
 }
 
 .modulo__enlace:hover {
-    background-size: 100% 4px;
+    background-size: 100% 3px;
 }
 
 .modulo__nombre {
     font-family: var(--display);
-    font-size: 27px;
+    font-size: 28px; /* Antes: 27px */
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.15;
 }
 
 .modulo__texto {
     flex-grow: 1;
     color: var(--tinta-suave);
     font-size: 15px;
+    line-height: 1.6; /* Mejora la legibilidad */
 }
 
 /* ---------- 8. Proyecto (banda oscura) ---------- */
@@ -355,15 +356,16 @@ button:focus-visible {
 .proyecto {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    gap: 60px;
+    gap: 64px; /* Antes: 60px */
     align-items: start;
     max-width: var(--ancho);
     margin: 0 auto;
 }
 
 .proyecto__texto {
-    max-width: 560px;
+    max-width: 580px; /* Antes: 560px */
     color: #C9D3CB;
+    line-height: 1.7;
 }
 
 /* Ficha de datos del proyecto */
